@@ -27,6 +27,7 @@ data =[
 columns =["peer_id", "id_1", "id_2", "year"]
 df = spark.createDataFrame(data=data, schema=columns)
 
+
 # 显示 DataFrame
 df.show()
 
