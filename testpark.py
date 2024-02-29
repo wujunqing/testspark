@@ -59,8 +59,12 @@ step2.show()
 # 2021, 3
 # As 1(2023 count) + 2(2022 count) >= 3 (given size number), the output would be 2023, 2022.
 
+
+#For example, for ‘AE686(AE)’
+st3=step2.select("peer_id", "year","count").filter(peer_id='AE686(AE)')
+
 # 使用groupBy和count进行聚合，计算每个year和Count数量
-s3 = step2.groupBy(col("year")).count()
+s3 = st3.groupBy(col("year")).count()
 s3.show()
 
 # 定义窗口规范，按年份分区，并按日期排序
