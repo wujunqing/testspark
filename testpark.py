@@ -61,7 +61,7 @@ step2.show()
 
 
 #For example, for ‘AE686(AE)’
-st3=step2.select("peer_id", "year","count").filter(peer_id='AE686(AE)')
+st3=step2.select("peer_id", "year","count").filter(step2["peer_id"]=='AE686(AE)')
 
 # 使用groupBy和count进行聚合，计算每个year和Count数量
 s3 = st3.groupBy(col("year")).count()
